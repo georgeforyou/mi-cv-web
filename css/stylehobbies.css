@@ -1,0 +1,105 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+a
+{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav{
+    background-color: #3c7085;
+    height: 80px;
+    width: 100%;
+}
+.checkbtn{
+    /*background-image: url("https://static.thenounproject.com/png/756729-200.png");*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+}
+#check{
+    display: none;
+}
+.enlace{
+    position: absolute;
+    padding: 10px 50px;
+}
+.logo{
+    height: 55px;
+    margin-bottom: 10px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: floralwhite;
+    font-size: 22px;
+    padding: 7px 13px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background-color: #457b9d;
+    transition: 0.5s;
+}
+.checkbtn{
+    size: 100%;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-top: 25px;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 558px){
+    .enlace{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #457b9d;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: #f1faee;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
